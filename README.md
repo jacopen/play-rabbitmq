@@ -27,9 +27,30 @@ $ python send.py
 $ python recive.py
 ```
 
+### [Work Queues][3]
+1. move to work-queue directory.
+1. Boot worker.
+```bash
+shell-1 $ python worker.py
+```
+1. Boot worker on another shell.
+```bash
+shell-2 $ python worker.py
+```
+1. Send messages
+```bash
+$ python new_task.py one message.
+$ python new_task.py two message..
+$ python new_task.py three message...
+$ python new_task.py fourth message....
+$ python new_task.py fifth message.....
+```
+
 ## Links
 * [RabbitMQ][1]
 * [Tutorial - HelloWorld][2]
+* [Tutorial - Work Queues][3]
 
 [1]: https://www.rabbitmq.com/
 [2]: https://www.rabbitmq.com/tutorials/tutorial-one-python.html
+[3]: https://www.rabbitmq.com/tutorials/tutorial-two-python.html
