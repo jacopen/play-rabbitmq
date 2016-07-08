@@ -46,11 +46,32 @@ $ python new_task.py fourth message....
 $ python new_task.py fifth message.....
 ```
 
+### [Publisher & Subscriber][4]
+
+1. Move to directory
+```bash
+$ cd publish-subscribe
+```
+1. Boot subscriber and save log file
+```bash
+$ python recive_logs.py > rabbit.log
+```
+1. Boot second subscriber
+```
+$ python recive_logs.py
+```
+1. Emit logs
+```bash
+$ python emit_log.py
+```
+
 ## Links
 * [RabbitMQ][1]
 * [Tutorial - HelloWorld][2]
 * [Tutorial - Work Queues][3]
+* [Tutorial - Publisher/Subscriber][4]
 
 [1]: https://www.rabbitmq.com/
 [2]: https://www.rabbitmq.com/tutorials/tutorial-one-python.html
 [3]: https://www.rabbitmq.com/tutorials/tutorial-two-python.html
+[4]: https://www.rabbitmq.com/tutorials/tutorial-three-python.html
