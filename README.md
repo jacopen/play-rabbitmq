@@ -65,13 +65,38 @@ $ python recive_logs.py
 $ python emit_log.py
 ```
 
+### [Routing][5]
+
+1. Move to directory
+```bash
+$ cd routing
+```
+1. Boot error subscriber
+```bash
+python receive_logs_direct.py error
+```
+1. Boot info subscriber
+```bash
+python receive_logs_direct.py info
+```
+1. Emit info message
+```bash
+python emit_log_direct.py
+```
+1. Emit error message
+```bash
+python emit_log_direct.py error NullPointerException
+```
+
 ## Links
 * [RabbitMQ][1]
 * [Tutorial - HelloWorld][2]
 * [Tutorial - Work Queues][3]
 * [Tutorial - Publisher/Subscriber][4]
+* [Tutorial - Routing][5]
 
 [1]: https://www.rabbitmq.com/
 [2]: https://www.rabbitmq.com/tutorials/tutorial-one-python.html
 [3]: https://www.rabbitmq.com/tutorials/tutorial-two-python.html
 [4]: https://www.rabbitmq.com/tutorials/tutorial-three-python.html
+[5]: https://www.rabbitmq.com/tutorials/tutorial-four-python.html
