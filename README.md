@@ -88,15 +88,51 @@ python emit_log_direct.py
 python emit_log_direct.py error NullPointerException
 ```
 
+### [Topics][6]
+
+1. Move to directory
+```bash
+$ cd topics
+```
+1. Boot all topics receiver
+```bash
+python receive_logs_topic.py "#"
+```
+1. Boot kern topic receiver
+```bash
+python receive_logs_topic.py "kern.*"
+```
+1. Boot critical topic receiver
+```bash
+python receive_logs_topic.py "*.critical"
+```
+1. Boot multiple topics receiver
+```bash
+python receive_logs_topic.py "kern.*" "*.critical"
+```
+1. Send messages
+```bash
+$ python emit_log_topic.py "kern.critical" "A critical kernel error"
+ [x] Sent 'kern.critical':'A critical kernel error'
+
+$ python emit_log_topic.py "warning" "A warning kernel error"
+ [x] Sent 'warning':'A warning kernel error'
+
+$ python emit_log_topic.py "kern.warning" "A warning kernel error"
+ [x] Sent 'kern.warning':'A warning kernel error'
+```
+
 ## Links
 * [RabbitMQ][1]
 * [Tutorial - HelloWorld][2]
 * [Tutorial - Work Queues][3]
 * [Tutorial - Publisher/Subscriber][4]
 * [Tutorial - Routing][5]
+* [Tutorial - Topics][6]
 
 [1]: https://www.rabbitmq.com/
 [2]: https://www.rabbitmq.com/tutorials/tutorial-one-python.html
 [3]: https://www.rabbitmq.com/tutorials/tutorial-two-python.html
 [4]: https://www.rabbitmq.com/tutorials/tutorial-three-python.html
 [5]: https://www.rabbitmq.com/tutorials/tutorial-four-python.html
+[6]: https://www.rabbitmq.com/tutorials/tutorial-five-python.html
