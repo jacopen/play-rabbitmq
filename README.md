@@ -122,6 +122,18 @@ $ python emit_log_topic.py "kern.warning" "A warning kernel error"
  [x] Sent 'kern.warning':'A warning kernel error'
 ```
 
+### RPC
+
+1. Move to `rpc` directory.
+1. Start the RPC server.
+```bash
+$ python rpc_server.py
+```
+1. Start the RPC client to request a fibonacci number.
+```bash
+$ python rpc_client.py
+```
+
 ## Links
 * [RabbitMQ][1]
 * [Tutorial - HelloWorld][2]
@@ -129,6 +141,7 @@ $ python emit_log_topic.py "kern.warning" "A warning kernel error"
 * [Tutorial - Publisher/Subscriber][4]
 * [Tutorial - Routing][5]
 * [Tutorial - Topics][6]
+* [Tutorial - RPC][7]
 
 [1]: https://www.rabbitmq.com/
 [2]: https://www.rabbitmq.com/tutorials/tutorial-one-python.html
@@ -136,3 +149,4 @@ $ python emit_log_topic.py "kern.warning" "A warning kernel error"
 [4]: https://www.rabbitmq.com/tutorials/tutorial-three-python.html
 [5]: https://www.rabbitmq.com/tutorials/tutorial-four-python.html
 [6]: https://www.rabbitmq.com/tutorials/tutorial-five-python.html
+[7]: https://www.rabbitmq.com/tutorials/tutorial-six-python.html
