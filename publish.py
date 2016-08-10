@@ -7,7 +7,7 @@ from lib import connection
 # you simply specify itsname or IP address here.
 channel = connection.connection.channel()
 
-channel.exchange_declare(exhange=connection.args.exchange, type='fanout')
+channel.exchange_declare(exchange=connection.args.exchange, type='fanout')
 channel.basic_publish(exchange=connection.args.exchange,
                       routing_key=connection.args.routing,
                       body=connection.args.body)
