@@ -15,10 +15,13 @@ parser.add_argument('-q', '--queue', \
                     default='hello', \
                     type=str)
 parser.add_argument('-r', '--routing', \
-                    default='hello', \
+                    default='', \
                     type=str)
 parser.add_argument('-b', '--body', \
                     default='Hello world', \
+                    type=str)
+parser.add_argument('-e', '--exchange', \
+                    default='', \
                     type=str)
 args = parser.parse_args()
 
